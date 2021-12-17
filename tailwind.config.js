@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       colors: {
         dark: "#222831",
-        primary: "#700DA8",
+        primary: "#F6A328",
       },
     },
     container: {
@@ -21,7 +21,7 @@ module.exports = {
       sans: ["Rubik", "sans-serif"],
     },
     backgroundColor: () => ({
-      primary: "#700DA8",
+      primary: "#F6A328",
       primaryLight: "#FCF7FF",
       lightBorder: "#E5E5E5",
       secondary: "#fff",

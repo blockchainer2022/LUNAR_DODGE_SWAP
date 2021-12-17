@@ -27,7 +27,7 @@ const Index = React.memo(
       },
       bar: {
         borderRadius: 5,
-        backgroundColor: "#700da8",
+        backgroundColor: "#F6A328",
       },
     }))(LinearProgress);
 

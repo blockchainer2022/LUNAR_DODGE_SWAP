@@ -77,17 +77,17 @@ const Index = ({
             <Field
               label1="Receive"
               icon={Mamba}
-              name="MAMBA"
+              name="Dodge"
               value={mamba}
               handler={mambaHandler}
               balance={userTokenBalance}
             />
             <span className="block text-xs mt-2 text-gray-500 text-center">
-              1 BNB = {total2} MAMBA
+              1 BNB = {total2} Dodge
             </span>
             <div className={`mt-8 swapbtn ${start || end ? "active" : null}`}>
               <Button secondary={true}>
-                {account ? "Swap To Mamba" : "Connect Wallet"}
+                {account ? "Swap To Dodge" : "Connect Wallet"}
               </Button>
             </div>
           </div>
