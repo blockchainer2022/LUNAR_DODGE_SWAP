@@ -77,13 +77,13 @@ const Index = ({
             <Field
               label1="Receive"
               icon={Mamba}
-              name="Dodge"
+              name="Doge"
               value={mamba}
               handler={mambaHandler}
               balance={userTokenBalance}
             />
             <span className="block text-xs mt-2 text-gray-500 text-center">
-              1 BNB = {total2} Dodge
+              1 BNB = {total2} Doge
             </span>
             <div className={`mt-8 swapbtn ${start || end ? "active" : null}`}>
               <Button secondary={true}>
