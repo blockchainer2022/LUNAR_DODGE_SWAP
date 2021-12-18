@@ -40,14 +40,14 @@ const Index = ({ account, loadWeb3, loadWalleConnect }) => {
                 target="_blank"
                 rel="noreferrer"
               >
-                Token Details
+                Tokenomics
               </a>
             </li>
-            <li className="p-3.5 text-sm">
+            {/* <li className="p-3.5 text-sm">
               <a href="https://t.me/MambaDev" target="_blank" rel="noreferrer">
                 Contact Us
               </a>
-            </li>
+            </li> */}
           </ul>
         </div>
 
@@ -109,14 +109,14 @@ const Index = ({ account, loadWeb3, loadWalleConnect }) => {
                 target="_blank"
                 rel="noreferrer"
               >
-                Token Details
+                Tokenomics
               </a>
             </li>
-            <li className="p-2 text-sm" onClick={() => setOpen(!open)}>
+            {/* <li className="p-2 text-sm" onClick={() => setOpen(!open)}>
               <a href="https://t.me/MambaDev" target="_blank" rel="noreferrer">
                 Contact Us
               </a>
-            </li>
+            </li> */}
 
             <li className="p-2 text-sm">
               <Button onClick={() => setWalletOpen((prev) => !prev)}>

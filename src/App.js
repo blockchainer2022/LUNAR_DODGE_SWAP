@@ -346,7 +346,7 @@ function App() {
         open={nftMinted}
         onClose={setNftMinted}
         title="Swap Successful"
-        text="You have successfully Swapped BNBs with MAMBAs"
+        text="You have successfully Swapped BNBs with DOGE"
         mint={true}
       />
       <InformationModal
@@ -371,7 +371,7 @@ function App() {
         open={switchToMainnet}
         onClose={setswitchToMainnet}
         title="Error"
-        text="Please switch to mainnet to Buy Mamba"
+        text="Please switch to mainnet to Buy DOGE"
       />
       <InformationModal
         open={ethereumCompatibleBrowser}
@@ -382,7 +382,7 @@ function App() {
       <ConfirmationLoadingPopup
         open={confirmTransaction}
         title="Confirm Transaction"
-        message="Confirm transaction to swap the BNBs with MAMBAs"
+        message="Confirm transaction to swap the BNBs with DOGE"
       />
       <ConfirmationLoadingPopup
         open={mintingInProgress}
