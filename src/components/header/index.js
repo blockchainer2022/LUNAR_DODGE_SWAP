@@ -21,13 +21,13 @@ const Index = ({ account, loadWeb3, loadWalleConnect }) => {
         <div className="hidden md:block flex-1">
           <ul className="flex list-none font-medium ml-8 ">
             <li className="p-3.5 text-sm">
-              <a href="http://mambatoken.org/" target="_blank" rel="noreferrer">
+              <a href="" target="_blank" rel="noreferrer">
                 Home
               </a>
             </li>
             <li className="p-3.5 text-sm">
               <a
-                href="https://bscscan.com/address/0x0cce692e4df6b413084d5ce6d6140fefcb3bc325#code"
+                href=""
                 target="_blank"
                 rel="noreferrer"
               >
@@ -36,7 +36,7 @@ const Index = ({ account, loadWeb3, loadWalleConnect }) => {
             </li>
             <li className="p-3.5 text-sm">
               <a
-                href="https://mambatoken.org/#stats"
+                href=""
                 target="_blank"
                 rel="noreferrer"
               >
@@ -90,13 +90,13 @@ const Index = ({ account, loadWeb3, loadWalleConnect }) => {
         >
           <ul className="list-none text-center font-medium p-8 text-white">
             <li className="p-2 text-sm " onClick={() => setOpen(!open)}>
-              <a href="http://mambatoken.org/" target="_blank" rel="noreferrer">
+              <a href="" target="_blank" rel="noreferrer">
                 Home
               </a>
             </li>
             <li className="p-2 text-sm" onClick={() => setOpen(!open)}>
               <a
-                href="https://bscscan.com/address/0x0cce692e4df6b413084d5ce6d6140fefcb3bc325#code"
+                href=""
                 target="_blank"
                 rel="noreferrer"
               >
@@ -105,7 +105,7 @@ const Index = ({ account, loadWeb3, loadWalleConnect }) => {
             </li>
             <li className="p-2 text-sm" onClick={() => setOpen(!open)}>
               <a
-                href="https://mambatoken.org/#stats"
+                href=""
                 target="_blank"
                 rel="noreferrer"
               >
