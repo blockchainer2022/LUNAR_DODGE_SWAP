@@ -23,7 +23,7 @@ const Home = ({
     const getData = async () => {
       try {
         const { data } = await axios.get(
-          "http://65.0.243.32/api/lunardoge/get-ico-details-testnet.php"
+          "https://defi.mobiwebsolutionz.com/api/lunardoge/get-ico-details-testnet.php"
         );
 
         setData(data.data);
