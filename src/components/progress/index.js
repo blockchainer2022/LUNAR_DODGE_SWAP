@@ -1,6 +1,8 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import { withStyles } from "@material-ui/core/styles";
 import LinearProgress from "@material-ui/core/LinearProgress";
+import "./style.css";
 const Index = React.memo(
   ({ totalSupply = 0, tokenSold = 0, account = false }) => {
     const total = new Intl.NumberFormat("en-GB", {
@@ -14,7 +16,15 @@ const Index = React.memo(
     }).format(tokenSold);
     // console.log("TOTALSUPPLE", totalSupply / 100);
 
-    const value = (Number(tokenSold) * 100) / Number(totalSupply);
+    // const value = (Number(tokenSold) * 100) / Number(totalSupply);
+
+    const progress = (Number(tokenSold) / Number(totalSupply)) * 100;
+    const width =
+      progress > 0
+        ? Math.floor(progress) + 1 >= 100
+          ? 100
+          : Math.floor(progress) + 1
+        : 0;
 
     // console.log(value);
     const BorderLinearProgress = withStyles((theme) => ({
@@ -33,18 +43,32 @@ const Index = React.memo(
 
     return (
       <div className="my-4 mb-6 dark:text-gray-50 capitalize">
-        <div className="flex mb-1 justify-between items-center">
+        {/* <div className="flex mb-1 justify-between items-center">
           <span>{total2}</span>
           <span>{total}</span>
-        </div>
+        </div> */}
 
-        <BorderLinearProgress
+        {/* <BorderLinearProgress
           variant="determinate"
           value={value ? (value > 1 ? Math.floor(value) + 1 : 2) : 0}
-        />
+        /> */}
+        <div className="progressbar">
+          <div className="border-4 border-gray-300 dark:border-white  progress-container overflow-hidden">
+            <div
+              className="bg-primary  progress-inner"
+              style={{
+                width: `${width}%`,
+              }}
+            ></div>
+          </div>
+        </div>
         <div className="flex mt-1 justify-between items-center">
-          <span>Total Sold</span>
-          <span>ICO Target</span>
+          <span>
+            Total Sold: <span>{total2}</span>
+          </span>
+          <span>
+            ICO Target: <span>{total}</span>
+          </span>
         </div>
       </div>
     );

@@ -38,9 +38,16 @@ const Index = ({ account, loadWeb3, loadWalleConnect }) => {
           </ul>
         </div>
 
+        <div>
+          <Button responsive onClick={() => setWalletOpen((prev) => !prev)}>
+            {account
+              ? account.slice(0, 8) + "..." + account.slice(account.length - 5)
+              : "Connect Wallet"}
+          </Button>
+        </div>
         <button
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-          className="transition-all duration-500 bg-secondary bg-opacity-25 h-8 w-8 md:w-10 md:h-10 flex justify-center items-center rounded-full"
+          className=" mr-2 md:mr-0 ml-3 transition-all duration-500 bg-secondary bg-opacity-25 h-8 w-8 md:w-10 md:h-10 flex justify-center items-center rounded-full"
         >
           <img
             src={theme === "dark" ? Moon : Sun}
@@ -48,14 +55,6 @@ const Index = ({ account, loadWeb3, loadWalleConnect }) => {
             className="w-5 sm:w-6 "
           />
         </button>
-
-        <div className="ml-3">
-          <Button responsive onClick={() => setWalletOpen((prev) => !prev)}>
-            {account
-              ? account.slice(0, 8) + "..." + account.slice(account.length - 5)
-              : "Connect Wallet"}
-          </Button>
-        </div>
 
         {/* Active on Mobile */}
         <div className=" text-lg cursor-pointer md:hidden ">

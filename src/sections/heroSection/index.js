@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Timer, Form, Progress } from "../../components";
 import moment from "moment";
 import "./style.css";
-
+import Star from "../../assets/images/star.png";
 const Index = ({
   account,
   buy,
@@ -44,7 +44,18 @@ const Index = ({
   });
 
   return (
-    <section className="pt-6 pb-2 text-dark">
+    <section className="pt-6 pb-2 text-dark relative">
+      {[
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+        21, 22,
+      ].map((v) => (
+        <img
+          src={Star}
+          alt=""
+          className={` z-0 hidden sm:block absolute animate-pulse  star${v}`}
+          key={v}
+        />
+      ))}
       <div className="container">
         <div className="max-w-xl w-full mx-auto">
           <Timer

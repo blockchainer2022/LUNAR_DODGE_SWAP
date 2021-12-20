@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Button from "../button";
 import "./style.css";
-import Mamba from "../../assets/images/Mamba.png";
+// import doge from "../../assets/images/doge.png";
 import Bnb from "../../assets/images/logo.png";
 import WalletPopup from "../walletpopup";
 import moment from "moment";
@@ -19,19 +19,19 @@ const Index = ({
   // console.log(endTime < +Date.now());
   // console.log(+Date.now());
   const [bnb, setBnb] = useState("");
-  const [mamba, setMamba] = useState("");
+  const [doge, setdoge] = useState("");
   const [walletOpen, setWalletOpen] = useState(false);
   const bnbHandler = (e) => {
     const reg = /^\d*\.?\d*$/;
     if (reg.test(e.target.value)) {
       setBnb(e.target.value);
-      setMamba(Number(icoPrice) * e.target.value);
+      setdoge(Number(icoPrice) * e.target.value);
     }
   };
-  const mambaHandler = (e) => {
+  const dogeHandler = (e) => {
     const reg = /^\d*\.?\d*$/;
     if (reg.test(e.target.value)) {
-      setMamba(e.target.value);
+      setdoge(e.target.value);
       setBnb(e.target.value / Number(icoPrice));
     }
   };
@@ -76,10 +76,10 @@ const Index = ({
             </span>
             <Field
               label1="Receive"
-              icon={Mamba}
+              icon={doge}
               name="Doge"
-              value={mamba}
-              handler={mambaHandler}
+              value={doge}
+              handler={dogeHandler}
               balance={userTokenBalance}
             />
             <span className="block text-xs mt-2 text-gray-500 text-center">
