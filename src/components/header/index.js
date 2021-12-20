@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import { useState, useContext } from "react";
 import "./style.css";
 import Logo from "../../assets/images/LOGOFINAL.png";
@@ -21,27 +22,13 @@ const Index = ({ account, loadWeb3, loadWalleConnect }) => {
         <div className="hidden md:block flex-1">
           <ul className="flex list-none font-medium ml-8 ">
             <li className="p-3.5 text-sm">
-              <a href="" target="_blank" rel="noreferrer">
-                Home
-              </a>
+              <a href="">Home</a>
             </li>
             <li className="p-3.5 text-sm">
-              <a
-                href=""
-                target="_blank"
-                rel="noreferrer"
-              >
-                ICO Contract
-              </a>
+              <a href="">ICO Contract</a>
             </li>
             <li className="p-3.5 text-sm">
-              <a
-                href=""
-                target="_blank"
-                rel="noreferrer"
-              >
-                Tokenomics
-              </a>
+              <a href="">Tokenomics</a>
             </li>
             {/* <li className="p-3.5 text-sm">
               <a href="https://t.me/MambaDev" target="_blank" rel="noreferrer">
@@ -90,27 +77,19 @@ const Index = ({ account, loadWeb3, loadWalleConnect }) => {
         >
           <ul className="list-none text-center font-medium p-8 text-white">
             <li className="p-2 text-sm " onClick={() => setOpen(!open)}>
-              <a href="" target="_blank" rel="noreferrer">
-                Home
-              </a>
+              <a href="">Home</a>
             </li>
             <li className="p-2 text-sm" onClick={() => setOpen(!open)}>
               <a
                 href=""
-                target="_blank"
-                rel="noreferrer"
+                // target="_blank"
+                // rel="noreferrer"
               >
                 ICO Contract
               </a>
             </li>
             <li className="p-2 text-sm" onClick={() => setOpen(!open)}>
-              <a
-                href=""
-                target="_blank"
-                rel="noreferrer"
-              >
-                Tokenomics
-              </a>
+              <a href="">Tokenomics</a>
             </li>
             {/* <li className="p-2 text-sm" onClick={() => setOpen(!open)}>
               <a href="https://t.me/MambaDev" target="_blank" rel="noreferrer">
