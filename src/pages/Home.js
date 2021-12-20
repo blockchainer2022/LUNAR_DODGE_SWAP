@@ -27,6 +27,7 @@ const Home = ({
         );
 
         setData(data.data);
+        console.log(data.data);
       } catch (error) {
         console.log(error);
       }
@@ -45,9 +46,12 @@ const Home = ({
         account={account}
         buy={buy}
         totalSupply={data.ICOtarget}
+        totalSupplyFormated={data.ICOtarget_formatted}
         icoPrice={data.ICOprice}
+        icoPriceFormated={data.ICOprice_formatted}
         bnbBalance={bnbBalance}
         tokenSold={data.total_sold}
+        tokenSoldFormated={data.total_sold_formatted}
         userTokenBalance={userTokenBalance}
         loadWalleConnect={loadWalleConnect}
         loadWeb3={loadWeb3}

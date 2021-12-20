@@ -4,7 +4,13 @@ import { withStyles } from "@material-ui/core/styles";
 import LinearProgress from "@material-ui/core/LinearProgress";
 import "./style.css";
 const Index = React.memo(
-  ({ totalSupply = 0, tokenSold = 0, account = false }) => {
+  ({
+    totalSupply = 0,
+    tokenSold = 0,
+    account = false,
+    totalSupplyFormated,
+    tokenSoldFormated,
+  }) => {
     const total = new Intl.NumberFormat("en-GB", {
       notation: "compact",
       compactDisplay: "short",
@@ -15,7 +21,7 @@ const Index = React.memo(
       compactDisplay: "short",
     }).format(tokenSold);
     // console.log("TOTALSUPPLE", totalSupply / 100);
-
+    console.log(totalSupply);
     // const value = (Number(tokenSold) * 100) / Number(totalSupply);
 
     const progress = (Number(tokenSold) / Number(totalSupply)) * 100;
@@ -64,10 +70,10 @@ const Index = React.memo(
         </div>
         <div className="flex mt-1 justify-between items-center">
           <span>
-            Total Sold: <span>{total2}</span>
+            Total Sold: <span>{tokenSoldFormated}</span>
           </span>
           <span>
-            ICO Target: <span>{total}</span>
+            ICO Target: <span>{totalSupplyFormated}</span>
           </span>
         </div>
       </div>

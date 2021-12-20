@@ -15,6 +15,9 @@ const Index = ({
   loadWalleConnect,
   startTime,
   endTime,
+  totalSupplyFormated,
+  icoPriceFormated,
+  tokenSoldFormated,
 }) => {
   var e = new Date(Number(endTime * 1000)).toUTCString();
   var s = new Date(Number(startTime * 1000)).toUTCString();
@@ -70,6 +73,8 @@ const Index = ({
             totalSupply={totalSupply}
             tokenSold={tokenSold}
             account={account}
+            totalSupplyFormated={totalSupplyFormated}
+            tokenSoldFormated={tokenSoldFormated}
           />
           <Form
             icoPrice={icoPrice}
@@ -81,6 +86,7 @@ const Index = ({
             loadWalleConnect={loadWalleConnect}
             startTime={startTime}
             endTime={endTime}
+            icoPriceFormated={icoPriceFormated}
           />
         </div>
       </div>

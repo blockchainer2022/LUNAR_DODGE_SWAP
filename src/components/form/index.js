@@ -1,7 +1,8 @@
+/* eslint-disable no-unused-vars */
 import { useState } from "react";
 import Button from "../button";
 import "./style.css";
-// import doge from "../../assets/images/doge.png";
+import dogeIcon from "../../assets/images/doge.png";
 import Bnb from "../../assets/images/logo.png";
 import WalletPopup from "../walletpopup";
 import moment from "moment";
@@ -15,6 +16,7 @@ const Index = ({
   loadWalleConnect,
   startTime,
   endTime,
+  icoPriceFormated,
 }) => {
   // console.log(endTime < +Date.now());
   // console.log(+Date.now());
@@ -76,14 +78,14 @@ const Index = ({
             </span>
             <Field
               label1="Receive"
-              icon={doge}
+              icon={dogeIcon}
               name="Doge"
               value={doge}
               handler={dogeHandler}
               balance={userTokenBalance}
             />
             <span className="block text-xs mt-2 text-gray-500 text-center">
-              1 BNB = {total2} Doge
+              1 BNB = {icoPriceFormated} Doge
             </span>
             <div className={`mt-8 swapbtn ${start || end ? "active" : null}`}>
               <Button secondary={true}>
