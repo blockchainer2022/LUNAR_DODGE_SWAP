@@ -101,6 +101,13 @@ export const contractAbi = [
     type: "function",
   },
   {
+    inputs: [],
+    name: "fundsClaimed",
+    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
     inputs: [{ internalType: "address", name: "_address", type: "address" }],
     name: "getBNBInvestment",
     outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
@@ -118,13 +125,6 @@ export const contractAbi = [
     inputs: [],
     name: "getLPLockedTokensBalance",
     outputs: [{ internalType: "uint256", name: "liquidity", type: "uint256" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [],
-    name: "getLiquidableTokensBalance",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
     stateMutability: "view",
     type: "function",
   },
@@ -151,13 +151,6 @@ export const contractAbi = [
   },
   {
     inputs: [],
-    name: "icoStarted",
-    outputs: [{ internalType: "bool", name: "", type: "bool" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [],
     name: "lockedBNBbalance",
     outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
     stateMutability: "view",
@@ -178,8 +171,49 @@ export const contractAbi = [
     type: "function",
   },
   {
-    inputs: [],
-    name: "startICO",
+    inputs: [
+      { internalType: "uint256", name: "_dexListingRate", type: "uint256" },
+    ],
+    name: "setDexListingRate",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [{ internalType: "uint256", name: "_endTime", type: "uint256" }],
+    name: "setEndTime",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [{ internalType: "uint256", name: "_startTime", type: "uint256" }],
+    name: "setStartTime",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [
+      { internalType: "address", name: "_tokenAddress", type: "address" },
+    ],
+    name: "setTokenAddress",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [
+      { internalType: "address", name: "_tokenAddress", type: "address" },
+    ],
+    name: "setTokenAddress2",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [{ internalType: "uint256", name: "_tokenSold", type: "uint256" }],
+    name: "setTokenSold",
     outputs: [],
     stateMutability: "nonpayable",
     type: "function",
@@ -221,12 +255,18 @@ export const contractAbi = [
   },
   {
     inputs: [],
+    name: "withdrawLPTokens",
+    outputs: [{ internalType: "bool", name: "", type: "bool" }],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [],
     name: "withdrawToken",
     outputs: [],
     stateMutability: "nonpayable",
     type: "function",
   },
 ];
-
-export const contractAddress = "0x0cCE692e4dF6B413084d5CE6d6140FEfCB3BC325";
+export const contractAddress = "0x0454bA628d5B308d187b2A7b3B25d62D3A0199dB";
 // export const contractAddress = "0xb05c7D0E023C8Bb7C824A7Eb531749AE61Dd95e4";
