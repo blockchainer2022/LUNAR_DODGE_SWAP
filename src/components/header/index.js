@@ -26,7 +26,7 @@ const Index = ({ account, loadWeb3, loadWalleConnect }) => {
             </li>
             <li className="p-3.5 text-sm">
               <a
-                href="https://bscscan.com/address/0xab81e6e7eac363c3dd5755cbee283dedf68b836c#code"
+                href="https://bscscan.com/address/0x01b64a1b5e2803ba8f77f30b07110c31cab5711a#code"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -92,7 +92,7 @@ const Index = ({ account, loadWeb3, loadWalleConnect }) => {
             </li>
             <li className="p-2 text-sm" onClick={() => setOpen(!open)}>
               <a
-                href="https://bscscan.com/address/0xab81e6e7eac363c3dd5755cbee283dedf68b836c#code"
+                href="https://bscscan.com/address/0x01b64a1b5e2803ba8f77f30b07110c31cab5711a#code"
                 target="_blank"
                 rel="noreferrer"
               >

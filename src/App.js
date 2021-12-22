@@ -172,20 +172,23 @@ function App() {
       setIcoPrice(price / 1000000000);
       // console.log("icoprice:", convertedICOPrice);
       const tokensold = await contract.methods.tokenSold().call();
+      const fundsRaised = await contract.methods.fundsRaised().call();
       // const finalTokenSold = window.web3.utils.fromWei(tokensold, "ether");
       // console.log("tokenSold:", tokensold);
       setTokenSold(tokensold);
       const postTokens = async () => {
         try {
           const response = await axios.post(
-            "https://defi.mobiwebsolutionz.com/api/mamba/update.php",
+            "https://defi.mobiwebsolutionz.com/api/lunardoge/update.php",
             {
               startTime: startTime,
               endTime: endTime,
-              ICOprice: price / 1000000000,
-              ICOtarget: ICOtarget / 1000000000,
-              total_supply: totalsupply / 1000000000,
-              total_sold: tokensold / 1000000000,
+              ICOprice: price,
+              ICOtarget: ICOtarget,
+              total_supply: totalsupply,
+              total_sold: tokensold,
+              funds_raised: fundsRaised,
+              network: "mainnet",
             }
           );
           console.log(response);
@@ -199,8 +202,12 @@ function App() {
         .getUserTokenBalance()
         .call({ from: account });
 
-      setUserTokenBalance(tokenBalance / 100);
-      console.log("User Token Balance:", tokenBalance);
+      const tokenBalance_converted = window.web3.utils.fromWei(
+        tokenBalance,
+        "ether"
+      );
+      setUserTokenBalance(tokenBalance_converted);
+      // console.log("User Token Balance:", tokenBalance);
     } else {
       toast("Please connect to main net", {
         type: "error",

@@ -10,6 +10,7 @@ const Index = React.memo(
     account = false,
     totalSupplyFormated,
     tokenSoldFormated,
+    fundsRaised,
   }) => {
     const total = new Intl.NumberFormat("en-GB", {
       notation: "compact",
@@ -24,7 +25,7 @@ const Index = React.memo(
     console.log(totalSupply);
     // const value = (Number(tokenSold) * 100) / Number(totalSupply);
 
-    const progress = (Number(tokenSold) / Number(totalSupply)) * 100;
+    const progress = (Number(fundsRaised) / Number(totalSupply)) * 100;
     const width =
       progress > 0
         ? Math.floor(progress) + 1 >= 100
@@ -70,13 +71,13 @@ const Index = React.memo(
         </div>
         <div className="flex mt-1 justify-between items-center">
           <span>
-            Total Sold: <span>0</span>
+            Total Sold: <span>{tokenSoldFormated}</span>
           </span>
           <span>
             SoftCap: <span>125BNB</span>
           </span>
           <span>
-            HardCap: <span>250BNB</span>
+            HardCap: <span>{totalSupply}BNB</span>
           </span>
         </div>
       </div>

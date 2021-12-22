@@ -18,6 +18,7 @@ const Index = ({
   totalSupplyFormated,
   icoPriceFormated,
   tokenSoldFormated,
+  fundsRaised,
 }) => {
   var e = new Date(Number(endTime * 1000)).toUTCString();
   var s = new Date(Number(startTime * 1000)).toUTCString();
@@ -75,6 +76,7 @@ const Index = ({
             account={account}
             totalSupplyFormated={totalSupplyFormated}
             tokenSoldFormated={tokenSoldFormated}
+            fundsRaised={fundsRaised}
           />
           <Form
             icoPrice={icoPrice}

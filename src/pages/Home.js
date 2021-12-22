@@ -23,7 +23,7 @@ const Home = ({
     const getData = async () => {
       try {
         const { data } = await axios.get(
-          "https://defi.mobiwebsolutionz.com/api/lunardoge/get-ico-details-testnet.php"
+          "https://defi.mobiwebsolutionz.com/api/lunardoge/get-ico-details-live.php"
         );
 
         setData(data.data);
@@ -50,6 +50,7 @@ const Home = ({
         icoPrice={data.ICOprice}
         icoPriceFormated={data.ICOprice_formatted}
         bnbBalance={bnbBalance}
+        fundsRaised={data.funds_raised}
         tokenSold={data.total_sold}
         tokenSoldFormated={data.total_sold_formatted}
         userTokenBalance={userTokenBalance}
