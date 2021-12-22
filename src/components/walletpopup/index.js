@@ -96,7 +96,7 @@ const Index = ({
                 <button className="disabled">
                   <img src={TWT} alt="" />
                   <div>
-                    <span className="text-xs">TrustWallet </span>
+                    <span className="text-xs">Trust Wallet </span>
                     <span className="soon">(coming soon for IOS)</span>
                   </div>
                 </button>
