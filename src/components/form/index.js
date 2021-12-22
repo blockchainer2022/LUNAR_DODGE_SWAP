@@ -85,7 +85,7 @@ const Index = ({
               balance={userTokenBalance}
             />
             <span className="block text-xs mt-2 text-gray-500 text-center">
-              1 BNB = {icoPriceFormated} Doge
+              1 BNB = {icoPriceFormated} DOGE
             </span>
             <div className={`mt-8 swapbtn ${start || end ? "active" : null}`}>
               <Button secondary={true}>
