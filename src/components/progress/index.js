@@ -73,7 +73,7 @@ const Index = React.memo(
             Total Sold: <span>0</span>
           </span>
           <span>
-            SoftCap: <span>150BNB</span>
+            SoftCap: <span>125BNB</span>
           </span>
           <span>
             HardCap: <span>250BNB</span>
