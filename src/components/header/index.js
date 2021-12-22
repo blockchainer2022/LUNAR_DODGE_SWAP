@@ -25,7 +25,13 @@ const Index = ({ account, loadWeb3, loadWalleConnect }) => {
               <a href="">Home</a>
             </li>
             <li className="p-3.5 text-sm">
-              <a href="">ICO Contract</a>
+            <a
+                href="https://bscscan.com/address/0xab81e6e7eac363c3dd5755cbee283dedf68b836c#code"
+                target="_blank"
+                rel="noreferrer"
+              >
+                ICO Contract
+              </a>
             </li>
             <li className="p-3.5 text-sm">
               <a href="">Tokenomics</a>
@@ -80,9 +86,9 @@ const Index = ({ account, loadWeb3, loadWalleConnect }) => {
             </li>
             <li className="p-2 text-sm" onClick={() => setOpen(!open)}>
               <a
-                href=""
-                // target="_blank"
-                // rel="noreferrer"
+                href="https://bscscan.com/address/0xab81e6e7eac363c3dd5755cbee283dedf68b836c#code"
+                target="_blank"
+                rel="noreferrer"
               >
                 ICO Contract
               </a>
