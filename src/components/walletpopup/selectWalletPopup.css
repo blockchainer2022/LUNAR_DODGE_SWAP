@@ -218,6 +218,7 @@ h3.svelte-8i8o6j {
 .wallet-list {
   display: flex;
   margin: 30px 0;
+  flex-wrap: wrap;
 }
 .wallet-list button {
   width: 50%;
@@ -225,6 +226,10 @@ h3.svelte-8i8o6j {
   align-items: center;
   padding: 10px 20px;
   border-radius: 30px;
+  margin-bottom: 10px;
+}
+.wallet-list button img {
+  width: 40px;
 }
 .wallet-list button span {
   margin-left: 20px;

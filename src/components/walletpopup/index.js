@@ -2,7 +2,8 @@
 import React from "react";
 import "./selectWalletPopup.css";
 import Metamask from "../../assets/images/metamask.png";
-
+import BNB from "../../assets/images/bnb-logo.svg";
+import TWT from "../../assets/images/trustwallet.png";
 const Index = ({
   open,
   onClose,
@@ -83,6 +84,20 @@ const Index = ({
                   <div>
                     <span className="text-xs">Wallet Connect</span>
                     <span className="soon">(Coming Soon)</span>
+                  </div>
+                </button>
+                <button className="disabled">
+                  <img src={BNB} alt="" />
+                  <div>
+                    <span className="text-xs"> Binance Wallet </span>
+                    <span className="soon"> (coming soon)</span>
+                  </div>
+                </button>
+                <button className="disabled">
+                  <img src={TWT} alt="" />
+                  <div>
+                    <span className="text-xs">TrustWallet </span>
+                    <span className="soon">(coming soon for IOS)</span>
                   </div>
                 </button>
               </div>
