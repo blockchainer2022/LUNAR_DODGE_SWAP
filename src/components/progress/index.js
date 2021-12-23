@@ -71,7 +71,8 @@ const Index = React.memo(
         </div>
         <div className="flex mt-1 justify-between items-center text-xs sm:text-base">
           <p>
-            Fund Raised: <>{Number(fundsRaised ? fundsRaised : 0).toFixed(2)}</>
+            Fund Raised:{" "}
+            <>{Number(fundsRaised ? fundsRaised : 0).toFixed(2)} BNB</>
           </p>
           <p className=" ">
             SoftCap: <>125 BNB</>
