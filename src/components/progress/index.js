@@ -69,16 +69,16 @@ const Index = React.memo(
             ></div>
           </div>
         </div>
-        <div className="flex mt-1 justify-between items-center">
-          <span>
-            Total Sold: <span>{tokenSoldFormated}</span>
-          </span>
-          <span>
-            SoftCap: <span>125BNB</span>
-          </span>
-          <span>
-            HardCap: <span>{totalSupply}BNB</span>
-          </span>
+        <div className="flex mt-1 justify-between items-center text-xs sm:text-base">
+          <p>
+            Fund Raised: <>{fundsRaised.toFixed(2)}</>
+          </p>
+          <p className=" ">
+            SoftCap: <>125 BNB</>
+          </p>
+          <p className="">
+            HardCap: <>{totalSupply} BNB</>
+          </p>
         </div>
       </div>
     );
