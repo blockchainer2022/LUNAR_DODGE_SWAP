@@ -69,7 +69,7 @@ const Index = React.memo(
             ></div>
           </div>
         </div>
-        <div className="flex mt-1 justify-between items-center text-xs sm:text-base">
+        <div className="flex mt-1 justify-between items-center progress-text">
           <p>
             Funds Raised:{" "}
             <>{Number(fundsRaised ? fundsRaised : 0).toFixed(2)} BNB</>
