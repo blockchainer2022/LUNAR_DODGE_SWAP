@@ -75,7 +75,7 @@ const Index = React.memo(
             <>{Number(fundsRaised ? fundsRaised : 0).toFixed(2)} BNB</>
           </p>
           <p className=" ">
-            SoftCap: <>125 BNB</>
+            SoftCap: <>25 BNB</>
           </p>
           <p className="">
             HardCap: <>{totalSupply} BNB</>
